@@ -1,0 +1,20 @@
+<html>
+    <form>
+        <label for="name">Name</label><br>
+    <input type="text" class="name"><br>
+     <label for="mail">Email</label><br>
+    <input type="text" class="mail"><br>
+    <label for="phone">Phone No</label><br>
+    <input type="number" class="mail"><br>
+    <button type="submit" id="sub">submit</button>
+   
+    <script>
+        var b=document.getElementById("sub");
+        b.addEventListener("click",function(){
+            fetch("https://test-api-v3.myways.ai/user?email=hnrneha123@gmail.com",{method:"get"}).then(response=>response.json())
+            .then(data=> console.log(data))
+
+        })
+        </script>
+    </form>     
+</html>
